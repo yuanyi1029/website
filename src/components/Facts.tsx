@@ -2,47 +2,49 @@ import profile2 from "../assets/profile2.png";
 
 const Facts: React.FC = () => { 
   return ( 
-    <section className="container">
+    <section className="
+      container
+      grid grid-cols-10 gap-[1.25rem] py-[2rem]"
+    >
       <img 
         src={ profile2 }
         alt="Profile 2 Image"
-        height={ 75 } 
-        width={ 75 }
+        className="
+          h-auto w-max 
+          col-span-4 self-center justify-self-center
+          rounded-2xl drop-shadow-lg"
       />
-      <div>
-        <h1>A Little Bit About Me. </h1>
+      <div className="col-span-6 pl-[2rem]">
+        <h1 className="pb-[2rem]">A Little Bit About Me. </h1>
         <p> 
           😊 Hello! I'm currently a computer science student at Monash 
-          University Malaysia looking to kickstart my career at the tech
-          industry. 
+          University Malaysia looking to kickstart my career in the tech 
+          industry.
         </p>
         <br></br>
         <p> 
-          💡 I've been programming since I was eighteen, and my passion and 
-          interest in computers led me to pursue a career in computer science. 
-          Since then, I have shifted my career focus into fullstack application
-          development and systems design where I work as a software engineering 
-          intern at multiple companies while exploring some machine learning 
-          concepts on my own.   
+          💡 I've been programming since I was eighteen, and my current passion 
+          lies within fullstack application development and systems design, 
+          where I work as a software engineering intern at multiple companies 
+          while exploring some machine learning concepts on my own.
         </p>
         <br></br>
         <p> 
           🌴 Previously, I have interned at Keysight Technologies and Ant 
-          International as a Software Engineer while working as a class 
-          assistant at Monash University for a few introductory cmputer science 
-          units. I would love to share my work and experience in a blog, but it 
-          is currently in progress and more updates on the soon!   
+          International as a software engineer. While I would love to share my 
+          work and experience in a blog, it is currently still in progress, so
+          more updates are coming soon!
         </p>
         <br></br>
         <p> 
-          💻 I enjoy working with the SpringBoot framework for the backend and 
-          React for the frontend, which I polish my skills by working on 
-          fullstack applications that I am passionate in. 
+          💻 I enjoy working with the Spring Boot framework for the backend and
+          ReactJS for the frontend, and I actively polish my skills by working 
+          on fullstack application passion projects.
         </p>
         <br></br>
         <p> 
-          🍵 When I'm not programming, you can find me watching Youtube videos, 
-          cafe hopping and looking for programming and design inspirations.
+          🍵 When I'm not programming, you can find me watching YouTube videos, 
+          cafe hopping, and looking for programming and design inspiration.
         </p>
       </div>
     </section>

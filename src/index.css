@@ -15,7 +15,10 @@
     @apply text-[2rem] font-bold text-black-primary; 
   }
   h3, a { 
-    @apply text-[1.5rem] font-normal text-black-primary; 
+    @apply text-[1.5rem] font-semi-bold text-black-primary; 
+  }
+  h4 { 
+    @apply text-[1.25rem] font-normal text-black-primary; 
   }
   p { 
     @apply text-[1rem] font-normal text-black-primary;

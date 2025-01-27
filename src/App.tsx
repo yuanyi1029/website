@@ -9,12 +9,10 @@ const App = () => {
   return (
     <>
       <Navbar /> 
-      <div className="modifylater"> 
-        <Routes>
-          <Route path="/" element={ <Home /> } />
-          <Route path="/about" element={ <About /> } />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={ <Home /> } />
+        <Route path="/about" element={ <About /> } />
+      </Routes>
       <Footer />
     </>
   )

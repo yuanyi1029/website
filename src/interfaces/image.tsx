@@ -1,7 +1,7 @@
-interface Icon { 
+interface Image { 
   src: string;
   alt: string; 
   label: string;
 }
 
-export default Icon;
+export default Image;

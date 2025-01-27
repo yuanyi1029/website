@@ -1,8 +1,8 @@
-import Icon from "./icon"; 
+import Image from "./image"; 
 
 interface Skill {
   title: string; 
-  icons: Icon[];
+  icons: Image[];
 }
 
 export default Skill;

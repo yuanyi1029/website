@@ -1,15 +1,15 @@
-import Icon from "./icon"; 
+import Image from "./image"; 
 
 type ExperienceType = "Full Time" | "Part Time" | "Contract" | "Internship"; 
 
 interface Experience { 
-  startDate: string;
-  endDate: string | null;
   company: string; 
   position: string; 
   type: ExperienceType; 
   description: string;
-  icon: Icon;
+  startDate: string;
+  endDate: string | null;
+  icon: Image;
 }
 
 export default Experience;
