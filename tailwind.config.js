@@ -17,7 +17,7 @@ export default {
       }, 
       fontWeight: { 
         "normal": 400,
-        "semi-bold": 450,
+        "semi-bold": 500,
         "bold": 600  
       }, 
       dropShadow: { 

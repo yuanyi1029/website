@@ -25,7 +25,7 @@ const Card: React.FC<Project> = ({
         src={ formatImage(image).src }
         alt={ formatImage(image).alt }
         className="
-          h-auto w-[31.25rem] aspect-[16/9] 
+          h-auto w-max md:w-[31.25rem] aspect-[16/9] 
           self-center rounded-2xl drop-shadow-sm"
       />
       <Tag { ...type }/>

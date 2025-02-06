@@ -9,9 +9,13 @@ const Experience: React.FC = () => {
     <section className="container border-t-2 border-grey-secondary">
       <h1 className="py-[2rem]">What I'm Doing.</h1>
       { 
-        experiencesData.map(eachExperience => { 
+        experiencesData.map((eachExperience, experienceIndex) => { 
           return (
-            <article className="grid grid-cols-10 gap-[1.25rem] pb-[2rem] "> 
+            <article 
+              key={ experienceIndex }
+              className="
+                grid grid-cols-10 gap-[0.25rem] md:gap-[1.25rem] pb-[2rem]"
+            > 
               <div className="col-span-2 pt-[0.5rem]"> 
                 <p>
                   { formatDate(eachExperience.startDate) }
@@ -20,7 +24,9 @@ const Experience: React.FC = () => {
                 </p>
               </div>
               <div className="col-span-8">
-                <div className="grid grid-cols-5 gap-[1.25rem]"> 
+                <div className="
+                  grid grid-cols-5 gap-[0.5rem] md:gap-[1.25rem]"
+                >
                   <img 
                     src={ eachExperience.icon.src } 
                     alt={ eachExperience.icon.alt }

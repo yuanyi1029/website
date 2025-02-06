@@ -4,17 +4,17 @@ const Facts: React.FC = () => {
   return ( 
     <section className="
       container
-      grid grid-cols-10 gap-[1.25rem] py-[2rem]"
+      grid grid-cols-10 gap-[2rem] py-[2rem]"
     >
       <img 
         src={ profile2 }
         alt="Profile 2 Image"
         className="
-          h-auto w-max 
-          col-span-4 self-center justify-self-center
+          h-auto w-[70%] md:w-max 
+          col-span-10 md:col-span-4 self-center justify-self-center
           rounded-2xl drop-shadow-lg"
       />
-      <div className="col-span-6 pl-[2rem]">
+      <div className="col-span-10 md:col-span-6">
         <h1 className="pb-[2rem]">A Little Bit About Me. </h1>
         <p> 
           😊 Hello! I'm currently a computer science student at Monash 
