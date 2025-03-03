@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { Link } from "react-router-dom"; 
 import { HashLink } from "react-router-hash-link";
+
+import Toggle from "./Toggle"; 
 import menu from "../assets/menu.svg"; 
-import { useState } from "react";
 
 const Navbar: React.FC = () => { 
   const [menuOpen, setMenuOpen] = useState<boolean>(false); 
@@ -19,15 +21,27 @@ const Navbar: React.FC = () => {
       container h-[8svh] md:h-[15svh] 
       flex justify-between items-center relative"
     >
-      <h2>
-        Yuanyi Wong.
-      </h2>
-      <img 
-        src={ menu } 
-        alt="Menu Icon" 
+      <div className="flex items-center gap-5">
+        <h2>
+          Yuanyi Wong.
+        </h2>
+        <Toggle />
+      </div>
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
         onClick={ toggleMenu }
-        className="h-8 w-8 cursor-pointer md:hidden"
+        className="ionicon h-8 w-8 cursor-pointer md:hidden text-text" 
+        viewBox="0 0 512 512"
+      >
+        <path 
+          fill="none" 
+          stroke="currentColor" 
+          strokeLinecap="round" 
+          strokeMiterlimit="10" 
+          strokeWidth="48" 
+          d="M88 152h336M88 256h336M88 360h336"
         />
+      </svg>
       <ul className={ `
         h-auto w-[100%] md:w-auto
         absolute md:static top-full left-0 z-50
@@ -44,8 +58,8 @@ const Navbar: React.FC = () => {
             onClick={ closeMenu }
             className="
               block p-2 md:py-0 
-              bg-grey-secondary md:bg-transparent rounded-2xl 
-              hover:text-grey-primary"
+              bg-highlight md:bg-transparent rounded-2xl 
+              hover:text-hover"
           >
             Home.
           </Link> 
@@ -57,8 +71,8 @@ const Navbar: React.FC = () => {
             onClick={ closeMenu }
             className="
               block p-2 md:py-0 
-              bg-grey-secondary md:bg-transparent rounded-2xl 
-              hover:text-grey-primary"
+              bg-highlight md:bg-transparent rounded-2xl 
+              hover:text-hover"
           >
             Projects.
           </HashLink>
@@ -69,8 +83,8 @@ const Navbar: React.FC = () => {
             onClick={ closeMenu }
             className="
               block p-2 md:py-0 
-              bg-grey-secondary md:bg-transparent rounded-2xl 
-              hover:text-grey-primary"
+              bg-highlight md:bg-transparent rounded-2xl 
+              hover:text-hover"
           >
             About.
           </Link>

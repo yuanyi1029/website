@@ -12,24 +12,24 @@ const Footer: React.FC = () => {
           href="https://github.com/yuanyi1029/" 
           target="_blank"
           rel="noreferrer"
-          className="hover:text-grey-primary transition-all"
-          >
-          <FaGithub className="text-[2rem] md:text-[2.4rem]" /> 
+          className="hover:text-hover transition-all"
+        >
+          <FaGithub className="text-[1.6rem]" /> 
         </a>
         <a 
           href="https://www.linkedin.com/in/wyuanyi/" 
           target="_blank"
           rel="noreferrer"
-          className="hover:text-grey-primary transition-all"
-          >
-          <FaLinkedin className="text-[2.2rem] md:text-[2.6rem]" /> 
+          className="hover:text-hover transition-all"
+        >
+          <FaLinkedin className="text-[1.7rem]" /> 
         </a>
         <a 
           href="mailto:wyuanyi1029@gmail.com?subject=Mail%20From%20Yuanyi%27s%20Portfolio!" 
           rel="noreferrer"
-          className="hover:text-grey-primary transition-all"
+          className="hover:text-hover transition-all"
         >
-          <IoMdMail className="text-[2.6rem] md:text-[3rem]"  /> 
+          <IoMdMail className="text-[2rem]" /> 
         </a>
       </div> 
       <p>Made with ❤️ by Yuanyi © 2025.</p>

@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
   return ( 
     <section 
       id="projects" 
-      className="container border-t-2 border-grey-secondary"
+      className="container border-t-2 border-highlight"
     >
       <h1 className="py-[2rem]">Features Projects.</h1>
       { 

@@ -7,10 +7,10 @@ export default {
   theme: {
     extend: {
       colors: { 
-        "black-primary": "#000000", 
-        "grey-primary": "#707070", 
-        "grey-secondary": "#E6E7E7", 
-        "white-primary": "#F6F6F6"
+        "text": "var(--text)",
+        "hover": "var(--hover)", 
+        "highlight": "var(--highlight)",
+        "background": "var(--background)", 
       }, 
       fontFamily: {
         "sans": ["Work Sans", "sans-serif"]

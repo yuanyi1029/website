@@ -6,7 +6,7 @@ const formatDate: (date: string | null) => string = (date) => {
 
 const Experience: React.FC = () => { 
   return ( 
-    <section className="container border-t-2 border-grey-secondary">
+    <section className="container border-t-2 border-highlight">
       <h1 className="py-[2rem]">What I'm Doing.</h1>
       { 
         experiencesData.map((eachExperience, experienceIndex) => { 

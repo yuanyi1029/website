@@ -2,7 +2,7 @@ import skillsData from "../data/skillsData";
 
 const Skills: React.FC = () => { 
   return ( 
-    <section className="container border-t-2 border-grey-secondary">
+    <section className="container border-t-2 border-highlight">
       <h1 className="py-[2rem]">Some of My Skills.</h1>
       {
         skillsData.map((eachSkill, skillIndex) => { 
@@ -18,7 +18,7 @@ const Skills: React.FC = () => {
                     return (
                       <div 
                         key={ iconIndex } 
-                        className="flex flex-col items-center"
+                        className="flex flex-col items-center gap-1"
                       > 
                         <img 
                           src={ eachIcon.src }

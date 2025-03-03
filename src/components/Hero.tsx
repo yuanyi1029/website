@@ -4,7 +4,7 @@ const Hero: React.FC = () => {
   return ( 
     <section className="
       container h-[65svh] md:h-[85svh]
-      grid grid-cols-10 gap-0 md:gap-[1.25rem] pb-[2rem] items-center"
+      grid grid-cols-10 gap-0 md:gap-[1.25rem] items-center"
     >
       <div className="
         col-span-10 md:col-span-6 pb-0 md:pb-20 order-2 md:order-1"
@@ -19,11 +19,11 @@ const Hero: React.FC = () => {
         </h3>
         <h4 className="
           px-[1rem] py-[0.25rem] 
-          bg-grey-secondary rounded-xl"
+          bg-highlight rounded-xl"
         > 
           📌 Currently a Backend Engineer at { " " }
           <b>
-            <u className="bg-grey-secondary">
+            <u className="bg-highlight">
               Ant International
             </u>
           </b>. 
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
           src={ profile1 }
           alt="Profile 1 Image"
           className="
-            h-72 w-72 
+            h-64 w-64 
             justify-self-center 
             rounded-full object-cover drop-shadow-lg"
         />
