@@ -53,41 +53,47 @@ const Navbar: React.FC = () => {
         ${ menuOpen === true ? "visible" : "invisible" } md:visible` }
       >
         <li className="rounded-2xl">
-          <Link 
-            to="/" 
-            onClick={ closeMenu }
-            className="
-              block p-2 md:py-0 
-              bg-highlight md:bg-transparent rounded-2xl 
-              hover:text-hover"
-          >
-            Home.
-          </Link> 
+          <h3>
+            <Link 
+              to="/" 
+              onClick={ closeMenu }
+              className="
+                block p-2 md:py-0 
+                bg-highlight md:bg-transparent rounded-2xl 
+                hover:text-hover"
+            >
+              Home.
+            </Link> 
+          </h3>
         </li>
         <li className="rounded-2xl">
-          <HashLink 
-            smooth 
-            to="/#projects" 
-            onClick={ closeMenu }
-            className="
-              block p-2 md:py-0 
-              bg-highlight md:bg-transparent rounded-2xl 
-              hover:text-hover"
-          >
-            Projects.
-          </HashLink>
+          <h3>
+            <HashLink 
+              smooth 
+              to="/#projects" 
+              onClick={ closeMenu }
+              className="
+                block p-2 md:py-0 
+                bg-highlight md:bg-transparent rounded-2xl 
+                hover:text-hover"
+            >
+              Projects.
+            </HashLink>
+          </h3>
         </li>
         <li className="rounded-2xl">
-          <Link 
-            to="/about" 
-            onClick={ closeMenu }
-            className="
-              block p-2 md:py-0 
-              bg-highlight md:bg-transparent rounded-2xl 
-              hover:text-hover"
-          >
-            About.
-          </Link>
+          <h3>
+            <Link 
+              to="/about" 
+              onClick={ closeMenu }
+              className="
+                block p-2 md:py-0 
+                bg-highlight md:bg-transparent rounded-2xl 
+                hover:text-hover"
+            >
+              About.
+            </Link>
+          </h3>
         </li>
       </ul>
     </nav>

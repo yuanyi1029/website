@@ -2,7 +2,7 @@ import Identifier from "../interfaces/identifier";
 
 const Tag: React.FC<Identifier> = ({ type, colour }) => { 
   return ( 
-    <div className="flex pt-[1.5rem] pb-[0.25rem]">
+    <>
       <p 
         style={{ 
           backgroundColor: `${ colour }30`, 
@@ -14,7 +14,7 @@ const Tag: React.FC<Identifier> = ({ type, colour }) => {
       >
         { type }
       </p>
-    </div>
+    </>
   )
 }
 

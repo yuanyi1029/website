@@ -23,7 +23,8 @@ const Projects: React.FC = () => {
             <div 
               key={ chunkIndex }
               className="
-                grid grid-cols-1 md:grid-cols-2 gap-[2rem] md:gap-[5rem] pb-[2rem]"
+                grid grid-cols-1 md:grid-cols-2 
+                gap-[1rem] md:gap-[3rem] pb-[1rem]"
             > 
               {
                 eachProjectChunk[0] && (

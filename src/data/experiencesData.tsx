@@ -19,7 +19,8 @@ const experiencesData: Experience[] = [
       src: ant, 
       alt: "Ant International Logo", 
       label: "Ant International"
-    }
+    },
+    hyperlink: "https://www.antglobal.com/"
   }, 
   { 
     company: "Keysight Technologies", 
@@ -36,7 +37,8 @@ const experiencesData: Experience[] = [
       src: keysight, 
       alt: "Keysight Technologies Logo", 
       label: "Keysight Technologies"
-    }
+    }, 
+    hyperlink: "https://www.keysight.com/"
   }, 
 ]
 

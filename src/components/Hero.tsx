@@ -24,7 +24,14 @@ const Hero: React.FC = () => {
           📌 Currently a Backend Engineer at { " " }
           <b>
             <u className="bg-highlight">
-              Ant International
+              <a 
+                href="https://www.antglobal.com/" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="bg-transparent hover:text-hover"
+              >
+                Ant International
+              </a>
             </u>
           </b>. 
         </h4>   

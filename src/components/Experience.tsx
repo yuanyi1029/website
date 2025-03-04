@@ -11,42 +11,59 @@ const Experience: React.FC = () => {
       { 
         experiencesData.map((eachExperience, experienceIndex) => { 
           return (
-            <article 
+            <a 
               key={ experienceIndex }
-              className="
-                grid grid-cols-10 gap-[0.25rem] md:gap-[1.25rem] pb-[2rem]"
-            > 
-              <div className="col-span-2 pt-[0.5rem]"> 
-                <p>
-                  { formatDate(eachExperience.startDate) }
-                  { " " } - { " " }
-                  { formatDate(eachExperience.endDate) }
-                </p>
-              </div>
-              <div className="col-span-8">
+              href={ eachExperience.hyperlink }
+              target="_blank"
+              rel="noreferrer"
+            >
+              <article 
+                key={ experienceIndex }
+                className="
+                  group grid grid-cols-10 
+                  gap-[0.25rem] md:gap-[3rem] p-[0.25rem] md:p-[1rem]
+                  hover:bg-highlight rounded-2xl"
+              > 
                 <div className="
-                  grid grid-cols-5 gap-[0.5rem] md:gap-[1.25rem]"
-                >
-                  <img 
-                    src={ eachExperience.icon.src } 
-                    alt={ eachExperience.icon.alt }
-                    className="
-                      h-auto w-max
-                      col-span-1 
-                      rounded-full object-cover drop-shadow-sm"
-                  /> 
-                  <div className="col-span-4">
-                    <h3>{ eachExperience.company }</h3>
-                    <h4 className="pb-[0.5rem]">
-                      { eachExperience.position }
-                      { " " } • { " " }
-                      { eachExperience.type }
-                    </h4>
-                    <p>{ eachExperience.description }</p>
+                  col-span-2 md:pt-[0.5rem] 
+                  group-hover:bg-highlight"
+                > 
+                  <p className="group-hover:bg-highlight">
+                    { formatDate(eachExperience.startDate) }
+                    { " " } - { " " }
+                    { formatDate(eachExperience.endDate) }
+                  </p>
+                </div>
+                <div className="col-span-8">
+                  <div className="
+                    grid grid-cols-5 gap-[0.5rem] md:gap-[1.25rem] 
+                    group-hover:bg-highlight"
+                  >
+                    <img 
+                      src={ eachExperience.icon.src } 
+                      alt={ eachExperience.icon.alt }
+                      className="
+                        h-auto w-max
+                        col-span-1 
+                        rounded-full object-cover drop-shadow-sm"
+                    /> 
+                    <div className="col-span-4 group-hover:bg-highlight">
+                      <h3 className="group-hover:bg-highlight">
+                        { eachExperience.company }
+                      </h3>
+                      <h4 className="pb-[0.5rem] group-hover:bg-highlight">
+                        { eachExperience.position }
+                        { " " } • { " " }
+                        { eachExperience.type }
+                      </h4>
+                      <p className="group-hover:bg-highlight">
+                        { eachExperience.description }
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </article>
+              </article>
+            </a>
           )
         })
       }

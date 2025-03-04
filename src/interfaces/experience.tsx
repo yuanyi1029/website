@@ -10,6 +10,7 @@ interface Experience {
   startDate: string;
   endDate: string | null;
   icon: Image;
+  hyperlink: string;
 }
 
 export default Experience;

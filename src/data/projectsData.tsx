@@ -15,7 +15,8 @@ const projectsData: Project[] = [
       src: placeholder, 
       alt: "Portfolio Website Image", 
       label: "Portfolio Website"
-    }
+    },
+    hyperlink: "https://www.google.com/"
   },
   {
     title: "Portfolio Website 2",   
@@ -30,7 +31,8 @@ const projectsData: Project[] = [
       src: placeholder, 
       alt: "Portfolio Website Image", 
       label: "Portfolio Website"
-    }
+    },
+    hyperlink: "https://www.google.com/"
   },
   {
     title: "Portfolio Website 3",   
@@ -45,7 +47,8 @@ const projectsData: Project[] = [
       src: placeholder, 
       alt: "Portfolio Website Image", 
       label: "Portfolio Website"
-    }
+    },
+    hyperlink: "https://www.google.com/"
   },
   {
     title: "Portfolio Website 4",  
@@ -60,7 +63,8 @@ const projectsData: Project[] = [
       src: placeholder, 
       alt: "Portfolio Website Image", 
       label: "Portfolio Website"
-    }
+    },
+    hyperlink: "https://www.google.com/"
   },
 ]
 

@@ -34,7 +34,7 @@ a, .custom-pointer {
   h2 { 
     @apply text-[1.25rem] md:text-[1.5rem] font-bold text-text; 
   }
-  h3, a { 
+  h3 { 
     @apply text-[1rem] md:text-[1.25rem] font-semi-bold text-text; 
   }
   h4 { 

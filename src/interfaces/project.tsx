@@ -7,6 +7,7 @@ interface Project {
   description: string;
   date: string; 
   image: Image | null; 
+  hyperlink: string;
 }
 
 export default Project; 
