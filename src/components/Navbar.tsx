@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 import Toggle from "./Toggle"; 
-import menu from "../assets/menu.svg"; 
 
 const Navbar: React.FC = () => { 
   const [menuOpen, setMenuOpen] = useState<boolean>(false); 
@@ -47,12 +46,12 @@ const Navbar: React.FC = () => {
         absolute md:static top-full left-0 z-50
         flex flex-col md:flex-row    
         gap-2 md:gap-10 px-2 py-4 md:p-0
-        bg-white md:bg-transparent
+        bg-background md:bg-transparent
         rounded-b-2xl md:rounded-none
-        shadow-lg md:shadow-none 
+        shadow-sm md:shadow-none 
         ${ menuOpen === true ? "visible" : "invisible" } md:visible` }
       >
-        <li className="rounded-2xl">
+        <li>
           <h3>
             <Link 
               to="/" 
@@ -66,7 +65,7 @@ const Navbar: React.FC = () => {
             </Link> 
           </h3>
         </li>
-        <li className="rounded-2xl">
+        <li>
           <h3>
             <HashLink 
               smooth 
@@ -81,7 +80,7 @@ const Navbar: React.FC = () => {
             </HashLink>
           </h3>
         </li>
-        <li className="rounded-2xl">
+        <li>
           <h3>
             <Link 
               to="/about" 
