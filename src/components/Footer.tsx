@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           href="https://github.com/yuanyi1029/" 
           target="_blank"
           rel="noreferrer"
-          className="hover:text-hover transition-all"
+          className="text-text hover:text-hover"
         >
           <FaGithub className="text-[1.6rem]" /> 
         </a>
@@ -20,14 +20,14 @@ const Footer: React.FC = () => {
           href="https://www.linkedin.com/in/wyuanyi/" 
           target="_blank"
           rel="noreferrer"
-          className="hover:text-hover transition-all"
+          className="text-text hover:text-hover"
         >
           <FaLinkedin className="text-[1.7rem]" /> 
         </a>
         <a 
-          href="mailto:wyuanyi1029@gmail.com?subject=Mail%20From%20Yuanyi%27s%20Portfolio!" 
+          href="mailto:wyuanyi1029@gmail.com?subject=Mail%20From%20Yuanyi%27s%20Portfolio!"
           rel="noreferrer"
-          className="hover:text-hover transition-all"
+          className="text-text hover:text-hover"
         >
           <IoMdMail className="text-[2rem]" /> 
         </a>

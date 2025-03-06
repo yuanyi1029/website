@@ -21,16 +21,21 @@ const Experience: React.FC = () => {
                 key={ experienceIndex }
                 className="
                   group grid grid-cols-10 
-                  gap-[0.25rem] md:gap-[3rem] p-[0.25rem] md:p-[1rem]
+                  gap-[0.75rem] md:gap-[3rem] p-[0.5rem] md:p-[1rem]
                   hover:bg-highlight rounded-2xl"
               > 
                 <div className="
                   col-span-2 md:pt-[0.5rem] 
                   group-hover:bg-highlight"
                 > 
-                  <p className="group-hover:bg-highlight">
+                  <p className="
+                    flex flex-col md:flex-row items-center 
+                    group-hover:bg-highlight"
+                  >
                     { formatDate(eachExperience.startDate) }
-                    { " " } - { " " }
+                    <span className="group-hover:bg-highlight">
+                      &nbsp;-&nbsp;
+                    </span>
                     { formatDate(eachExperience.endDate) }
                   </p>
                 </div>
