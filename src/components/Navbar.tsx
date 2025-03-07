@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
         h-auto w-[100%] md:w-auto
         absolute md:static top-full left-0 z-50
         flex flex-col md:flex-row    
-        gap-2 md:gap-10 px-2 py-4 md:p-0
+        gap-2 md:gap-6 px-2 py-4 md:p-0
         bg-background md:bg-transparent
         rounded-b-2xl md:rounded-none
         shadow-sm md:shadow-none 
@@ -92,6 +92,21 @@ const Navbar: React.FC = () => {
             >
               About.
             </Link>
+          </h3>
+        </li>
+        <li>
+          <h3>
+            <HashLink 
+              smooth 
+              to="/#contact" 
+              onClick={ closeMenu }
+              className="
+                block p-2 md:py-0 
+                bg-highlight md:bg-transparent rounded-2xl 
+                hover:text-hover"
+            >
+              Contact.
+            </HashLink>
           </h3>
         </li>
       </ul>
