@@ -1,6 +1,8 @@
 import { useState } from "react"
+import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
+import Toast from "./Toast";
 import { ContactForm } from "../interfaces/form";
 
 const Contact: React.FC = () => {
@@ -38,8 +40,30 @@ const Contact: React.FC = () => {
         formData as Record<string, string>, 
         publicKey
       )
-      .then(() => { console.log("Success!") })
-      .catch((error) => { console.log(error) });
+      .then(() => { 
+        toast(
+          <Toast 
+            type="success" 
+            title="Message Received!" 
+            description="Thanks you! I'll get back to you soon!" 
+          />, 
+          {
+            closeButton: false,
+          }
+        );
+      })
+      .catch(() => { 
+        toast(
+          <Toast 
+            type="error" 
+            title="An Error Occured!" 
+            description="Something went wrong. Please try again." 
+          />, 
+          {
+            closeButton: false,
+          }
+        ); 
+      });
   }
 
   return (
@@ -48,47 +72,68 @@ const Contact: React.FC = () => {
       className="container border-t-2"
     >
       <h1 className="py-[2rem]">Come Say Hi.</h1>
-     
-      <form onSubmit={ handleSubmit }>
-        <div className="flex flex-col">
-          <label htmlFor="name">Name *</label>
+
+      <form 
+        onSubmit={ handleSubmit }
+        className="flex flex-col gap-4 py-[1rem]"
+      >
+        <div className="flex flex-col gap-2">
+          <label htmlFor="name">
+            Name 
+            <span className="text-red-500">&nbsp;*</span>
+          </label>
           <input 
+            required
             type="text"
             id="name"
             name="name"
             placeholder="How may I address you?"
             value={ formData.name }
             onChange={ handleChange }
-            className="border-2"
+            className="p-2 rounded-xl border-2 border-text"
             />
         </div>
 
-        <div className="flex flex-col">
-          <label>Email *</label>
+        <div className="flex flex-col gap-2">
+          <label>
+            Email
+            <span className="text-red-500">&nbsp;*</span>
+          </label>
           <input 
+            required
             type="text"
             id="email"
             name="email"
             placeholder="How may I contact you?"
             value={ formData.email }
             onChange={ handleChange }
-            className="border-2"
+            className="p-2 rounded-xl border-2 border-text"
             />
         </div>
 
-        <div className="flex flex-col">
-          <label htmlFor="message">Message *</label>
-          <textarea 
+        <div className="flex flex-col gap-2">
+          <label htmlFor="message">
+            Message
+            <span className="text-red-500">&nbsp;*</span>
+          </label>
+          <textarea
+            required
             id="message"
             name="message"
+            rows={ 5 }
             placeholder="Tell me more!"
             value={ formData.message }
             onChange={ handleChange }
-            className="border-2"
+            className="p-2 rounded-xl border-2 border-text"
           />
         </div>
 
-        <button type="submit">Submit</button>
+        <button 
+          type="submit"
+          className="p-2 rounded-xl text-text border-2 border-text"
+        >
+          Submit
+        </button>
       </form>
     </section>
   )   
