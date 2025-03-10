@@ -11,6 +11,7 @@ export default {
         "hover": "var(--hover)", 
         "highlight": "var(--highlight)",
         "background": "var(--background)", 
+        "outline": "var(--outline)", 
       }, 
       fontFamily: {
         "sans": ["Work Sans", "sans-serif"]

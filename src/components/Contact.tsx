@@ -15,12 +15,23 @@ const Contact: React.FC = () => {
   const handleChange: (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void = (event) => {
-    const { name, value } = event.target
+    const { name, value } = event.target; 
 
     setFormData(previousState => ({
       ...previousState,
       [name]: value
     }))
+  }
+
+  const handleBlur: (
+    event: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement> 
+  ) => void = (event) => {
+    const { classList, value } = event.target;
+    const trimmedValue = value.trim();
+
+    if (trimmedValue === "") { 
+      console.log("Empty")
+    }
   }
 
   const handleSubmit: (
@@ -30,7 +41,7 @@ const Contact: React.FC = () => {
 
     const serviceId = import.meta.env.VITE_SERVICE_ID;
     const templateId = import.meta.env.VITE_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_PUBLIC_KEY
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY; 
 
     // EmailJS requires custom interface to be of type Record<string, unknown>
     emailjs
@@ -69,7 +80,7 @@ const Contact: React.FC = () => {
   return (
     <section 
       id="contact" 
-      className="container border-t-2"
+      className="container border-t-2 border-highlight"
     >
       <h1 className="py-[2rem]">Come Say Hi.</h1>
 
@@ -90,8 +101,12 @@ const Contact: React.FC = () => {
             placeholder="How may I address you?"
             value={ formData.name }
             onChange={ handleChange }
-            className="p-2 rounded-xl border-2 border-text"
-            />
+            onBlur={ handleBlur }
+            className="
+              p-2 
+              text-text border-2 border-outline outline-text rounded-xl 
+              custom-pointer"
+          />
         </div>
 
         <div className="flex flex-col gap-2">
@@ -107,8 +122,12 @@ const Contact: React.FC = () => {
             placeholder="How may I contact you?"
             value={ formData.email }
             onChange={ handleChange }
-            className="p-2 rounded-xl border-2 border-text"
-            />
+            onBlur={ handleBlur }
+            className="
+              p-2 
+              text-text border-2 border-outline outline-text rounded-xl 
+              custom-pointer" 
+          />
         </div>
 
         <div className="flex flex-col gap-2">
@@ -124,15 +143,23 @@ const Contact: React.FC = () => {
             placeholder="Tell me more!"
             value={ formData.message }
             onChange={ handleChange }
-            className="p-2 rounded-xl border-2 border-text"
+            onBlur={ handleBlur }
+            className="
+              resize-none p-2 
+              text-text border-2 border-outline outline-text rounded-xl 
+              custom-pointer"
           />
         </div>
 
         <button 
           type="submit"
-          className="p-2 rounded-xl text-text border-2 border-text"
+          className="
+            p-2 
+            text-text bg-transparent hover:bg-highlight
+            border-2 border-outline hover:border-text rounded-xl
+            custom-pointer"
         >
-          Submit
+          💌 Submit
         </button>
       </form>
     </section>

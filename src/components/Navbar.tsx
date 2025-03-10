@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
         onClick={ toggleMenu }
-        className="ionicon h-8 w-8 cursor-pointer md:hidden text-text" 
+        className="ionicon h-8 w-8 md:hidden text-text custom-pointer"
         viewBox="0 0 512 512"
       >
         <path 

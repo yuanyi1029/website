@@ -9,6 +9,7 @@
   --background: #F6F6F6;
   --hover: #707070; 
   --highlight: #E6E7E7;
+  --outline: #A6A7A7; 
 }
 
 .dark {
@@ -16,6 +17,7 @@
   --background: #202020;
   --hover: #BDBDBD; 
   --highlight: #707070;
+  --outline: #959595; 
 }
 
 /* ========== Custom Cursor ========== */
