@@ -1,16 +1,6 @@
 import Tag from "./Tag"; 
 import Project from "../interfaces/project";
-import Image from "../interfaces/image";
-import placeholder from "../assets/placeholder.png"; 
-
-const formatImage: (image: Image | null) => Image = (image) => { 
-  const placeholderImage: Image = {
-    src: placeholder, 
-    alt: "Placeholder Image",
-    label: "Placeholder Image"
-  };
-  return (image === null ? placeholderImage : image); 
-}
+import { formatImage } from "../utils/format"; 
 
 const Card: React.FC<Project> = ({ 
   title, 

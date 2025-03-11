@@ -1,8 +1,5 @@
 import experiencesData from "../data/experiencesData";
-
-const formatDate: (date: string | null) => string = (date) => {
-  return (date === null ? "Present" : date);
-}
+import { formatDate } from "../utils/format";
 
 const Experience: React.FC = () => { 
   return ( 

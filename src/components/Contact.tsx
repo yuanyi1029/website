@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
 import Toast from "./Toast";
+import Form from "./Form";
 import { ContactForm } from "../interfaces/form";
 
 const Contact: React.FC = () => {
@@ -83,8 +84,9 @@ const Contact: React.FC = () => {
       className="container border-t-2 border-highlight"
     >
       <h1 className="py-[2rem]">Come Say Hi.</h1>
+      <Form />
 
-      <form 
+      {/* <form 
         onSubmit={ handleSubmit }
         className="flex flex-col gap-4 py-[1rem]"
       >
@@ -161,7 +163,7 @@ const Contact: React.FC = () => {
         >
           💌 Submit
         </button>
-      </form>
+      </form> */}
     </section>
   )   
 }
