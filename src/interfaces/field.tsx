@@ -1,19 +1,23 @@
-import { UseFormRegister } from "react-hook-form";
+import { RegisterOptions } from "react-hook-form";
 
-import { ContactForm } from "./form";
-
-type ComponentType = "input" | "textarea"; 
-type FieldType = "text"; 
-
-interface Field {
-  componentType: ComponentType;
-  type: FieldType;
-  id: string;
+interface BaseField { 
+  id: string; 
   name: string; 
-  label: string;
-  placeholder: string;
-  register: UseFormRegister<ContactForm>; 
-  validation?: Object;
+  label: string; 
+  placeholder: string; 
+  validation?: RegisterOptions; 
 }
 
-export default Field; 
+interface InputField extends BaseField { 
+  type: "input";
+  inputType: "text" | "password"; 
+}
+
+interface TextAreaField extends BaseField {
+  type: "textarea";
+  inputType: null
+}
+
+type Field = InputField | TextAreaField;
+
+export default Field;

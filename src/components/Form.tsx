@@ -1,4 +1,4 @@
-import { useForm, SubmitHandler } from "react-hook-form"; 
+import { useForm, SubmitHandler, FormProvider } from "react-hook-form"; 
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
@@ -7,11 +7,9 @@ import Input from "./Input";
 import { ContactForm } from "../interfaces/form"; 
 
 const Form: React.FC = () => { 
-  const { register, handleSubmit } = useForm<ContactForm>(); 
-  
-  const onSubmit: SubmitHandler<ContactForm> = (data) => {
-    console.log(data); 
-    
+  const methods = useForm<ContactForm>(); 
+
+  const onSubmit: SubmitHandler<ContactForm> = (data) => {    
     const serviceId = import.meta.env.VITE_SERVICE_ID;
     const templateId = import.meta.env.VITE_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_PUBLIC_KEY; 
@@ -21,7 +19,7 @@ const Form: React.FC = () => {
       .send(
         serviceId, 
         templateId, 
-        data, 
+        data as Record<string, string>, 
         publicKey
       )
       .then(() => { 
@@ -51,54 +49,53 @@ const Form: React.FC = () => {
   }; 
   
   return (
-    <form 
-      onSubmit={ handleSubmit(onSubmit) }
-      className="flex flex-col gap-4 py-[1rem]"
-    >
-      <Input 
-        componentType="input" 
-        type="text" 
-        id="name" 
-        name="name" 
-        label="Name"
-        placeholder="How may I address you?" 
-        register={ register } 
-        validation={{ required: true }} 
-      />
-
-      <Input 
-        componentType="input" 
-        type="text" 
-        id="email" 
-        name="email" 
-        label="Email" 
-        placeholder="How may I contact you?"
-        register={ register } 
-        validation={{ required: true }} 
-      />
-
-      <Input 
-        componentType="textarea" 
-        type="text" 
-        id="message" 
-        name="message" 
-        label="Message" 
-        placeholder="Tell me more!"
-        register={ register } 
-        validation={{ required: true }} 
-      />
-
-      <button 
-        type="submit"
-        className="
-          p-2 
-          text-text bg-transparent hover:bg-highlight
-          border-2 border-outline hover:border-text rounded-xl 
-          custom-pointer"
+    <FormProvider { ...methods }>
+      <form 
+        onSubmit={ methods.handleSubmit(onSubmit) }
+        className="flex flex-col gap-4 py-[1rem]"
       >
-        💌 Submit
-      </button> 
-    </form>
+        <Input 
+          type="input" 
+          inputType="text" 
+          id="name" 
+          name="name" 
+          label="Name"
+          placeholder="How may I address you?" 
+          validation={{ required: true }} 
+        />
+
+        <Input 
+          type="input" 
+          inputType="text" 
+          id="email" 
+          name="email" 
+          label="Email" 
+          placeholder="How may I contact you?"
+          validation={{ required: true }} 
+        />
+
+        <Input 
+          type="textarea" 
+          inputType={ null }
+          id="message" 
+          name="message" 
+          label="Message" 
+          placeholder="Tell me more!"
+          validation={{ required: true }} 
+        />
+
+        <button 
+          type="submit"
+          className="
+            p-2 
+            text-text bg-transparent hover:bg-highlight
+            border-2 border-outline hover:border-text rounded-xl 
+            custom-pointer"
+        >
+          💌 Submit
+        </button> 
+      </form>
+    </FormProvider>
   )
 }
 
