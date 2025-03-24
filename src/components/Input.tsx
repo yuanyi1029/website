@@ -19,7 +19,7 @@ const Input: React.FC<Field> = ({
         <label htmlFor={ id }>
           { label }
           {
-            validation?.required === true &&  
+            validation?.required &&  
             <span className="text-red-500">&nbsp;*</span>
           }
         </label>
@@ -33,10 +33,14 @@ const Input: React.FC<Field> = ({
               placeholder={ placeholder }
               className={ `
                 p-2
-                text-text border-2 border-outline 
+                text-text border-2  
+                ${ 
+                  formState.errors[name] ? 
+                  "border-red-500" : 
+                  "border-outline"
+                }
                 outline-text rounded-xl
                 custom-pointer ` }
-              aria-invalid={ formState.errors.name ? "true" : "false" }
             />
           ) : (
             <textarea 
@@ -46,10 +50,14 @@ const Input: React.FC<Field> = ({
               placeholder={ placeholder }
               className={ `
                 resize-none p-2 
-                text-text border-2 border-outline
+                text-text border-2 
+                ${ 
+                  formState.errors[name] ? 
+                  "border-red-500" : 
+                  "border-outline"
+                }
                 outline-text rounded-xl
                 custom-pointer ` } 
-              aria-invalid={ formState.errors.name ? "true" : "false" }
             />
           )
         }
@@ -60,11 +68,17 @@ const Input: React.FC<Field> = ({
         "name" from props rather than "name" literally 
       */}
       <p className={ `
-        text-red-500 ${ formState.errors[name] ? 
-        "visible" : 
-        "invisible" }` }
+        text-red-500 h-auto
+        ${ 
+          formState.errors[name] ? 
+          "visible" : 
+          "invisible" 
+        } ` }
       >
-        { label } is required!
+        { 
+          formState.errors[name]?.message as string || 
+          "Invalid field!"
+        }
       </p>
     </div>
   )

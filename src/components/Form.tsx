@@ -5,9 +5,14 @@ import emailjs from "@emailjs/browser";
 import Toast from "./Toast";
 import Input from "./Input"; 
 import { ContactForm } from "../interfaces/form"; 
+import { validateEmptyField } from "../utils/validation";
 
 const Form: React.FC = () => { 
-  const methods = useForm<ContactForm>(); 
+  const methods = useForm<ContactForm>({
+    mode: "onSubmit", 
+    reValidateMode: "onBlur", 
+    shouldFocusError: false
+  }); 
 
   const onSubmit: SubmitHandler<ContactForm> = (data) => {    
     const serviceId = import.meta.env.VITE_SERVICE_ID;
@@ -61,7 +66,7 @@ const Form: React.FC = () => {
           name="name" 
           label="Name"
           placeholder="How may I address you?" 
-          validation={{ required: true }} 
+          validation={ validateEmptyField("Name") } 
         />
 
         <Input 
@@ -71,7 +76,7 @@ const Form: React.FC = () => {
           name="email" 
           label="Email" 
           placeholder="How may I contact you?"
-          validation={{ required: true }} 
+          validation={ validateEmptyField("Email") } 
         />
 
         <Input 
@@ -81,7 +86,7 @@ const Form: React.FC = () => {
           name="message" 
           label="Message" 
           placeholder="Tell me more!"
-          validation={{ required: true }} 
+          validation={ validateEmptyField("Message") } 
         />
 
         <button 

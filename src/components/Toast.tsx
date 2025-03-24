@@ -1,7 +1,7 @@
 import { MdCheckCircle, MdCancel } from "react-icons/md";
-import ToastProps from "../interfaces/toast"; 
+import Alert from "../interfaces/alert"; 
 
-const Toast: React.FC<ToastProps> = ({ type, title, description }) => { 
+const Toast: React.FC<Alert> = ({ type, title, description }) => { 
   return (
     <div className="flex gap-4 items-center bg-white">
       {
