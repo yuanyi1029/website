@@ -10,6 +10,7 @@ const Input: React.FC<Field> = ({
   label, 
   placeholder, 
   validation,
+  disabled
 }) => {
   const { register, formState } = useFormContext();  
 
@@ -31,9 +32,12 @@ const Input: React.FC<Field> = ({
               id={ id } 
               { ...register(name, validation) }
               placeholder={ placeholder }
+              disabled={ disabled }
               className={ `
                 p-2
-                text-text border-2  
+                text-text 
+                bg-transparent disabled:bg-highlight
+                border-2
                 ${ 
                   formState.errors[name] ? 
                   "border-red-500" : 
@@ -48,9 +52,12 @@ const Input: React.FC<Field> = ({
               { ...register(name, validation) }
               rows={ 5 }
               placeholder={ placeholder }
+              disabled={ disabled }
               className={ `
                 resize-none p-2 
-                text-text border-2 
+                text-text 
+                bg-transparent disabled:bg-highlight
+                border-2 
                 ${ 
                   formState.errors[name] ? 
                   "border-red-500" : 
@@ -69,11 +76,7 @@ const Input: React.FC<Field> = ({
       */}
       <p className={ `
         text-red-500 h-auto
-        ${ 
-          formState.errors[name] ? 
-          "visible" : 
-          "invisible" 
-        } ` }
+        ${ formState.errors[name] ? "visible" : "invisible" } ` }
       >
         { 
           formState.errors[name]?.message as string || 

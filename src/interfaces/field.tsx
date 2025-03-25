@@ -6,6 +6,7 @@ interface BaseField {
   label: string; 
   placeholder: string; 
   validation?: RegisterOptions; 
+  disabled: boolean;
 }
 
 interface InputField extends BaseField { 

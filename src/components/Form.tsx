@@ -6,15 +6,20 @@ import Toast from "./Toast";
 import Input from "./Input"; 
 import { ContactForm } from "../interfaces/form"; 
 import { validateEmptyField } from "../utils/validation";
+import { useState } from "react";
 
 const Form: React.FC = () => { 
+  const [formSubmitting, setFormSubmitting] = useState<boolean>(false); 
+  
   const methods = useForm<ContactForm>({
     mode: "onSubmit", 
     reValidateMode: "onBlur", 
     shouldFocusError: false
   }); 
 
-  const onSubmit: SubmitHandler<ContactForm> = (data) => {    
+  const onSubmit: SubmitHandler<ContactForm> = (data) => {
+    setFormSubmitting(true); 
+
     const serviceId = import.meta.env.VITE_SERVICE_ID;
     const templateId = import.meta.env.VITE_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_PUBLIC_KEY; 
@@ -28,6 +33,7 @@ const Form: React.FC = () => {
         publicKey
       )
       .then(() => { 
+        setFormSubmitting(false); 
         toast(
           <Toast 
             type="success" 
@@ -38,8 +44,10 @@ const Form: React.FC = () => {
             closeButton: false,
           }
         );
+        methods.reset(); 
       })
       .catch(() => { 
+        setFormSubmitting(false); 
         toast(
           <Toast 
             type="error" 
@@ -51,7 +59,7 @@ const Form: React.FC = () => {
           }
         ); 
       });
-  }; 
+  }
   
   return (
     <FormProvider { ...methods }>
@@ -67,6 +75,7 @@ const Form: React.FC = () => {
           label="Name"
           placeholder="How may I address you?" 
           validation={ validateEmptyField("Name") } 
+          disabled={ formSubmitting }
         />
 
         <Input 
@@ -77,6 +86,7 @@ const Form: React.FC = () => {
           label="Email" 
           placeholder="How may I contact you?"
           validation={ validateEmptyField("Email") } 
+          disabled={ formSubmitting }
         />
 
         <Input 
@@ -87,15 +97,18 @@ const Form: React.FC = () => {
           label="Message" 
           placeholder="Tell me more!"
           validation={ validateEmptyField("Message") } 
+          disabled={ formSubmitting }
         />
 
         <button 
           type="submit"
-          className="
+          disabled={ formSubmitting }
+          className={ `
             p-2 
-            text-text bg-transparent hover:bg-highlight
-            border-2 border-outline hover:border-text rounded-xl 
-            custom-pointer"
+            text-text 
+            bg-transparent hover:bg-highlight disabled:bg-highlight
+            border-2 border-outline hover:border-text disabled:border-outline 
+            rounded-xl custom-pointer ` } 
         >
           💌 Submit
         </button> 
