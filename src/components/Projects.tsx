@@ -16,7 +16,7 @@ const Projects: React.FC = () => {
       id="projects" 
       className="container border-t-2 border-highlight"
     >
-      <h1 className="py-[2rem]">Features Projects.</h1>
+      <h1 className="py-[2rem]">Featured Projects.</h1>
       { 
         projectsDataChunk.map((eachProjectChunk, chunkIndex) => { 
           return (

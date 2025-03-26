@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import Toast from "./Toast";
 import Input from "./Input"; 
 import { ContactForm } from "../interfaces/form"; 
-import { validateEmptyField } from "../utils/validation";
+import { validateEmptySpaces } from "../utils/validation";
 import { useState } from "react";
 
 const Form: React.FC = () => { 
@@ -74,7 +74,10 @@ const Form: React.FC = () => {
           name="name" 
           label="Name"
           placeholder="How may I address you?" 
-          validation={ validateEmptyField("Name") } 
+          validation={{
+            required: true,
+            validate: validateEmptySpaces
+          }} 
           disabled={ formSubmitting }
         />
 
@@ -85,7 +88,10 @@ const Form: React.FC = () => {
           name="email" 
           label="Email" 
           placeholder="How may I contact you?"
-          validation={ validateEmptyField("Email") } 
+          validation={{ 
+            required: true,
+            validate: validateEmptySpaces
+          }} 
           disabled={ formSubmitting }
         />
 
@@ -96,7 +102,11 @@ const Form: React.FC = () => {
           name="message" 
           label="Message" 
           placeholder="Tell me more!"
-          validation={ validateEmptyField("Message") } 
+          validation={{ 
+            required: true,
+            validate: validateEmptySpaces,
+            maxLength: 500
+          }} 
           disabled={ formSubmitting }
         />
 

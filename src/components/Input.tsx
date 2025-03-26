@@ -78,9 +78,21 @@ const Input: React.FC<Field> = ({
         text-red-500 h-auto
         ${ formState.errors[name] ? "visible" : "invisible" } ` }
       >
-        { 
-          formState.errors[name]?.message as string || 
-          "Invalid field!"
+        {
+          (
+            () => {
+              switch (formState.errors[name]?.type) {
+                case "required":
+                  return `${label} is required!`;
+                case "validate":
+                  return `${label} is required!`;
+                case "maxLength":
+                  return `Maximum character of 500 reached!`;
+                default:
+                  return `Invalid field!`; 
+              }
+            }
+          )()
         }
       </p>
     </div>

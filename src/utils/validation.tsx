@@ -1,18 +1,8 @@
-const validateEmptyField: (
-  name: string
-) => { 
-  required: boolean | string,
-  validate: (value: string) => boolean | string 
-} = (name) => {
-  return {
-    required: `${name} is required!`,
-    validate: (value) => { 
-      if (value.trim() === "") { 
-        return `${name} is required!`;
-      }
-      return true;
-    }
+const validateEmptySpaces: (value: string) => boolean = (value) => {
+  if (value.trim() === "") {
+    return false; 
   }
+  return true;
 }
 
-export { validateEmptyField }; 
+export { validateEmptySpaces }; 
