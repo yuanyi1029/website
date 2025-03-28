@@ -1,20 +1,15 @@
 import Identifier from "../interfaces/identifier";
 
-const Tag: React.FC<Identifier> = ({ type, colour }) => { 
+const Tag: React.FC<Identifier> = ({ title }) => { 
   return ( 
-    <>
-      <p 
-        style={{ 
-          backgroundColor: `${ colour }30`, 
-          color: colour 
-        }} 
-        className="
-          px-[0.75rem] py-[0.25rem]
-          rounded-full object-cover"
-      >
-        { type }
-      </p>
-    </>
+    <p 
+      className="
+        px-[0.75rem] py-[0.25rem]
+        text-text bg-accent
+        rounded-full object-cover"
+    >
+      { title }
+    </p>
   )
 }
 

@@ -4,10 +4,7 @@ import placeholder from "../assets/placeholder.png";
 const projectsData: Project[] = [
   {
     title: "Portfolio Website 1", 
-    type: {
-      type: "Personal", 
-      colour: "#DB4437"
-    },
+    stack: ["React", "SpringBoot", "TypeScript", "JavaScript", "Python", "Django", "IntelliJ"],
     description: "A simple portfolio webstie to showcase my work.", 
     date: new Date(2024, 1)
       .toLocaleString("en-US", { year: "numeric" }),
@@ -20,10 +17,7 @@ const projectsData: Project[] = [
   },
   {
     title: "Portfolio Website 2",   
-    type: {
-      type: "Personal", 
-      colour: "#4285F4"
-    },
+    stack: ["React", "SpringBoot", "TypeScript"],
     description: "A simple portfolio webstie to showcase my work.", 
     date: new Date(2024, 1)
     .toLocaleString("en-US", { year: "numeric" }),
@@ -35,11 +29,8 @@ const projectsData: Project[] = [
     hyperlink: "https://www.google.com/"
   },
   {
-    title: "Portfolio Website 3",   
-    type: {
-      type: "Personal", 
-      colour: "#DB4437"
-    },
+    title: "Portfolio Website 3",
+    stack: ["React", "SpringBoot", "TypeScript"],
     description: "A simple portfolio webstie to showcase my work.", 
     date: new Date(2024, 1)
     .toLocaleString("en-US", { year: "numeric" }),
@@ -52,10 +43,7 @@ const projectsData: Project[] = [
   },
   {
     title: "Portfolio Website 4",  
-    type: {
-      type: "Personal", 
-      colour: "#4285F4"
-    },
+    stack: ["React", "SpringBoot", "TypeScript"],
     description: "A simple portfolio webstie to showcase my work.", 
     date: new Date(2024, 1)
     .toLocaleString("en-US", { year: "numeric" }),

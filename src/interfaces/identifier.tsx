@@ -1,8 +1,7 @@
-type IdentifierType = "Personal" | "Academic" | "Collaborative" | "Client Work"; 
+import { StackType } from "./stack";
 
 interface Identifier { 
-  type: IdentifierType;
-  colour: string; 
+  title: StackType
 }
 
 export default Identifier;

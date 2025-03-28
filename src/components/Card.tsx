@@ -4,7 +4,7 @@ import { formatImage } from "../utils/format";
 
 const Card: React.FC<Project> = ({ 
   title, 
-  type, 
+  stack,
   description, 
   date, 
   image,
@@ -28,8 +28,20 @@ const Card: React.FC<Project> = ({
             h-auto w-max md:w-[31.25rem] aspect-[16/9] 
             self-center rounded-2xl drop-shadow-sm"
         />
-        <div className="flex pt-[1rem] pb-[0.5rem] group-hover:bg-highlight">
-          <Tag { ...type }/>
+        <div className="
+          flex flex-wrap gap-1 pt-[1rem] pb-[0.5rem] 
+          group-hover:bg-highlight"
+        >
+          {
+            stack.map((eachStack, stackIndex) => { 
+              return (
+                <Tag 
+                  title={ eachStack }
+                  key={ stackIndex }
+                />
+              )
+            })
+          }
         </div>
         <h3 className="group-hover:bg-highlight">{ title } ({ date })</h3>
         <p className=" group-hover:bg-highlight">{ description }</p>

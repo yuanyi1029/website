@@ -1,9 +1,9 @@
 import Image from "./image";
-import Identifier from "./identifier";
+import { StackType } from "./stack";
 
 interface Project { 
   title: string; 
-  type: Identifier;
+  stack: StackType[];
   description: string;
   date: string; 
   image: Image | null; 

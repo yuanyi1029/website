@@ -15,7 +15,6 @@ const Experience: React.FC = () => {
               rel="noreferrer"
             >
               <article 
-                key={ experienceIndex }
                 className="
                   group grid grid-cols-10 
                   gap-[0.75rem] md:gap-[3rem] p-[0.5rem] md:p-[1rem]

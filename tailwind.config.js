@@ -12,6 +12,8 @@ export default {
         "highlight": "var(--highlight)",
         "background": "var(--background)", 
         "outline": "var(--outline)", 
+        "accent": "var(--accent)",
+        "shadow": "var(--shadow)", 
       }, 
       fontFamily: {
         "sans": ["Work Sans", "sans-serif"]
@@ -22,8 +24,8 @@ export default {
         "bold": 600  
       }, 
       dropShadow: { 
-        sm: "4px 4px 8px rgba(0, 0, 0, 0.25)",
-        lg: "12px 12px 16px rgba(0, 0, 0, 0.25)"
+        sm: "4px 4px 8px var(--shadow)",
+        lg: "12px 12px 16px var(--shadow)"
       }
     },
   },
