@@ -70,3 +70,12 @@ a, .custom-pointer {
   border-radius: 1rem;
   background-color: white;
 }
+
+/* ===== Form Autocomplete Background Colour (Unsupported by Tailwind) ===== */
+input:-webkit-autofill, textarea:-webkit-autofill { 
+  -webkit-box-shadow: 0 0 0px 30px var(--background) inset;
+}
+
+input:-webkit-autofill:disabled, textarea:-webkit-autofill:disabled { 
+  -webkit-box-shadow: 0 0 0px 30px var(--highlight) inset;
+}

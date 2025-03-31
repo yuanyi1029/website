@@ -29,9 +29,9 @@ const projectsData: Project[] = [
     hyperlink: "https://www.google.com/"
   },
   {
-    title: "Portfolio Website 3",
+    title: "Portfolio Website 3 Portfolio Website 3",
     stack: ["React", "SpringBoot", "TypeScript"],
-    description: "A simple portfolio webstie to showcase my work.", 
+    description: "A simple portfolio webstie to showcase my work. A simple portfolio webstie to showcase my work. A simple portfolio webstie to showcase my work. A simple portfolio webstie to showcase my work.", 
     date: new Date(2024, 1)
     .toLocaleString("en-US", { year: "numeric" }),
     image: {
@@ -43,8 +43,8 @@ const projectsData: Project[] = [
   },
   {
     title: "Portfolio Website 4",  
-    stack: ["React", "SpringBoot", "TypeScript"],
-    description: "A simple portfolio webstie to showcase my work.", 
+    stack: ["React", "SpringBoot", "TypeScript", "Python", "VS Code", "Postman", "MongoDB", "Linux", "HTML" ],
+    description: "A simple portfolio webstie to showcase my work. A simple portfolio webstie to showcase my work. A simple portfolio webstie to showcase my work. A simple portfolio webstie to showcase my work. A simple portfolio webstie to showcase my work. A simple portfolio webstie to showcase my work.A simple portfolio webstie to showcase my work. A simple portfolio webstie to showcase my work.", 
     date: new Date(2024, 1)
     .toLocaleString("en-US", { year: "numeric" }),
     image: {
