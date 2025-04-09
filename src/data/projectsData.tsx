@@ -30,32 +30,6 @@ const projectsData: Project[] = [
     },
     hyperlink: "https://github.com/yuanyi1029/financetracker"
   },
-  // {
-  //   title: "Portfolio Website 3 Portfolio Website 3",
-  //   stack: ["React", "SpringBoot", "TypeScript"],
-  //   description: "A simple portfolio webstie to showcase my work. A simple portfolio webstie to showcase my work. A simple portfolio webstie to showcase my work. A simple portfolio webstie to showcase my work.", 
-  //   date: new Date(2024, 1)
-  //   .toLocaleString("en-US", { year: "numeric" }),
-  //   image: {
-  //     src: placeholder, 
-  //     alt: "Portfolio Website Image", 
-  //     label: "Portfolio Website"
-  //   },
-  //   hyperlink: "https://www.google.com/"
-  // },
-  // {
-  //   title: "Portfolio Website 4",  
-  //   stack: ["React", "SpringBoot", "TypeScript", "Python", "VS Code", "Postman", "MongoDB", "Linux", "HTML" ],
-  //   description: "A simple portfolio webstie to showcase my work. A simple portfolio webstie to showcase my work. A simple portfolio webstie to showcase my work. A simple portfolio webstie to showcase my work. A simple portfolio webstie to showcase my work. A simple portfolio webstie to showcase my work.A simple portfolio webstie to showcase my work. A simple portfolio webstie to showcase my work.", 
-  //   date: new Date(2024, 1)
-  //   .toLocaleString("en-US", { year: "numeric" }),
-  //   image: {
-  //     src: placeholder, 
-  //     alt: "Portfolio Website Image", 
-  //     label: "Portfolio Website"
-  //   },
-  //   hyperlink: "https://www.google.com/"
-  // },
 ]
 
 export default projectsData;
