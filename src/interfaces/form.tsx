@@ -6,6 +6,4 @@ interface ContactForm {
   message: string; 
 }
 
-export type { 
-  ContactForm 
-};
+export type { ContactForm };

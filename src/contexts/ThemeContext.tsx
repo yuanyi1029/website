@@ -3,12 +3,12 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { 
   ThemeType, 
   ThemeContextReturn, 
-  ThemeContextProps 
+  ThemeContextChildren 
 } from "../interfaces/theme";
 
 const ThemeContext = createContext<ThemeContextReturn | undefined>(undefined);
 
-const ThemeProvider: React.FC<ThemeContextProps> = ({ children }) => {
+const ThemeProvider: React.FC<ThemeContextChildren> = ({ children }) => {
   const defaultTheme: ThemeType = window.matchMedia(
       "(prefers-color-scheme: light)"
     ).matches ? "light" : "dark"

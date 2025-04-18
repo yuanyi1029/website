@@ -5,12 +5,12 @@ interface ThemeContextReturn {
   setTheme: React.Dispatch<React.SetStateAction<ThemeType>>;
 }
 
-interface ThemeContextProps {
+interface ThemeContextChildren {
   children: React.ReactNode; 
 }
 
 export type { 
   ThemeType, 
   ThemeContextReturn, 
-  ThemeContextProps, 
+  ThemeContextChildren, 
 };
