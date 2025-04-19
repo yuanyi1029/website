@@ -1,24 +1,26 @@
-import { motion } from "motion/react";
+import { motion, useAnimate, useInView } from "motion/react";
 
 import ScrollChildren from "../interfaces/scroll";
+import { useEffect } from "react";
 
 const Scroll: React.FC<ScrollChildren> = ({ children }) => { 
+  const [scope, animate] = useAnimate(); 
+  const isInView = useInView(scope, {
+    amount: 0.2
+  });
+  
+  useEffect(() => {
+    if (isInView) {
+      animate(scope.current, { opacity: 1, y: 0 }, { duration: 0.5 })
+    } 
+  }, [isInView])
+  
   return (
     <motion.div
-      initial={{
-        opacity: 0,
-        y: 50
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        transition: {
-          duration: 0.5
-        }
-      }}
-      viewport={{ 
-        once: true,
-        amount: 0.5
+      ref={ scope }
+      style={{
+        opacity: 0, 
+        y: 30
       }}
     >
       { children }

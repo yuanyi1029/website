@@ -1,4 +1,5 @@
 import Card from "./Card"; 
+import Scroll from "./Scroll";
 import projectsData from "../data/projectsData";
 
 const Projects: React.FC = () => { 
@@ -7,21 +8,23 @@ const Projects: React.FC = () => {
       id="projects" 
       className="container py-8 border-t-2 border-highlight"
     >
-      <h1 className="pb-[1rem]">Featured Projects.</h1>
-      <div className="
-        grid grid-cols-1 md:grid-cols-2"
-      >
-        {
-          projectsData.map((eachProject, projectIndex) => {
-            return (
-              <Card 
-                { ...eachProject }
-                key={ projectIndex } 
-              />
-            )
-          })
-        }
-      </div>
+      <Scroll>
+        <h1 className="pb-[1rem]">Featured Projects.</h1>
+        <div className="
+          grid grid-cols-1 md:grid-cols-2"
+        >
+          {
+            projectsData.map((eachProject, projectIndex) => {
+              return (
+                <Card 
+                  { ...eachProject }
+                  key={ projectIndex } 
+                />
+              )
+            })
+          }
+        </div>
+      </Scroll>
     </section>
   )
 }
