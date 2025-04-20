@@ -19,13 +19,15 @@ const Card: React.FC<Project> = ({
         group grid grid-rows-subgrid row-span-4
         hover:bg-highlight rounded-2xl custom-pointer"
     >
-      <img
-        src={ formatImage(image).src }
-        alt={ formatImage(image).alt }
-        className="
-          h-auto w-auto aspect-[16/9] 
-          self-center rounded-2xl drop-shadow-sm"
-      />
+      <div className="overflow-hidden rounded-2xl">
+        <img
+          src={ formatImage(image).src }
+          alt={ formatImage(image).alt }
+          className="
+            h-auto w-auto aspect-[16/9] 
+            self-center rounded-2xl drop-shadow-sm group-hover:scale-110"
+        />
+      </div>
       <div className="
         flex flex-wrap gap-1 py-4
         group-hover:bg-highlight"
