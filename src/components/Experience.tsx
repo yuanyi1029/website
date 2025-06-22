@@ -19,7 +19,7 @@ const Experience: React.FC = () => {
                 <article 
                   className="
                     group grid grid-cols-10 
-                    gap-[0.75rem] md:gap-[3rem] p-[0.5rem] md:p-[1rem]
+                    gap-[0.75rem] md:gap-[1rem] p-[0.5rem] md:p-[1rem]
                     hover:bg-highlight rounded-2xl"
                 > 
                   <div className="

@@ -23,28 +23,25 @@ const Facts: React.FC = () => {
             </p>
             <br></br>
             <p> 
-              💡 I've been programming since I was eighteen, and my current passion 
-              lies within fullstack application development and systems design, 
-              where I work as a software engineering intern at multiple companies 
-              while exploring some machine learning concepts on my own.
+              💡 I've been programming since I was eighteen, with a strong passion 
+              for fullstack application development and systems design. Currently, 
+              I'm on the lookout for software engineering roles, all while diving 
+              into machine learning concepts on my own.   
             </p>
             <br></br>
             <p> 
-              🌴 Previously, I have interned at Keysight Technologies and Ant 
-              International as a software engineer. While I would love to share my 
-              work and experience in a blog, it is currently still in progress, so
-              more updates are coming soon!
+              🌴 My past experience? I have previously interned at Keysight Technologies
+              and Ant International as a software engineer, with more exciting projects 
+              coming soon! 
             </p>
             <br></br>
             <p> 
-              💻 I enjoy working with the Spring Boot framework for the backend and
-              ReactJS for the frontend, and I actively polish my skills by working 
-              on fullstack application passion projects.
+              💻 Tech stack-wise? Spring Boot and ReactJS, all day every day. 
             </p>
             <br></br>
             <p> 
-              🍵 When I'm not programming, you can find me watching YouTube videos, 
-              cafe hopping, and looking for programming and design inspirations.
+              🍵 My hobbies you ask? without a doubt watching YouTube videos, cafe 
+              hopping, and the occasional game of badminton. 
             </p>
           </div>
         </div>

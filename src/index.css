@@ -50,7 +50,7 @@ a, .custom-pointer {
     @apply text-[0.75rem] md:text-[1rem] font-normal text-text; 
   }
   p { 
-    @apply text-[0.75rem] md:text-[0.75rem] font-normal text-text;
+    @apply text-[0.75rem] md:text-[0.875rem] font-normal text-text;
   }
 }
 

@@ -1,9 +1,37 @@
 import Project from "../interfaces/project";
 import placeholder from "../assets/placeholder.png"; 
+import optimizer from "../assets/optimizer.png";
+import santorini from "../assets/santorini.png";
 import tetris from "../assets/tetris.png"; 
 import finance from "../assets/finance.png";
 
 const projectsData: Project[] = [
+  {
+    title: "Model Optimizer Tool",   
+    stack: ["PyTorch", "TensorFlow", "Streamlit"],
+    description: "The description for the model optimizer tool.",
+    date: new Date(2025, 1)
+    .toLocaleString("en-US", { year: "numeric" }),
+    image: {
+      src: optimizer, 
+      alt: "Model Optimizer Tool", 
+      label: "Model Optimizer Tool"
+    },
+    hyperlink: "https://youtu.be/acaEMnF4qD4"
+  },
+  {
+    title: "Santorini Desktop Game",   
+    stack: ["Java"],
+    description: "A desktop version of the classic turn-based Santorini board game built with the Model View Controller (MVC) architecture.",
+    date: new Date(2025, 1)
+    .toLocaleString("en-US", { year: "numeric" }),
+    image: {
+      src: santorini, 
+      alt: "Santorini Desktop Game Image", 
+      label: "Santorini Desktop Game"
+    },
+    hyperlink: "https://youtu.be/7m_r1CqQhjE"
+  },
   {
     title: "Tetris Web Game", 
     stack: ["TypeScript", "HTML", "CSS"],
@@ -15,7 +43,7 @@ const projectsData: Project[] = [
       alt: "Tetris Web Game Image", 
       label: "Tetris Web Game"
     },
-    hyperlink: "https://github.com/yuanyi1029/tetris"
+    hyperlink: "https://youtu.be/K_BIOWSXTMM"
   },
   {
     title: "Finance Tracker Web Application",   
@@ -28,7 +56,7 @@ const projectsData: Project[] = [
       alt: "Finance Tracker Web Application Image", 
       label: "Finance Tracker Web Applicatione"
     },
-    hyperlink: "https://github.com/yuanyi1029/financetracker"
+    hyperlink: "https://youtu.be/Y7p4wvrOxyo"
   },
 ]
 

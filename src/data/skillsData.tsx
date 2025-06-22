@@ -48,7 +48,7 @@ const skillsData: Skill[] = [
       { 
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", 
         alt: "React Icon", 
-        label: "React", 
+        label: "ReactJS", 
       }, 
       { 
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg", 
