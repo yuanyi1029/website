@@ -1,13 +1,15 @@
 import Hero from "../components/Hero"; 
 import Projects from "../components/Projects";
-import Contact from "../components/Contact"; 
+import Skills from "../components/Skills";
+import Experience from "../components/Experience";
 
 const Home: React.FC = () => { 
   return ( 
     <>
       <Hero /> 
       <Projects />
-      <Contact /> 
+      <Skills /> 
+      <Experience /> 
     </>
   )
 }

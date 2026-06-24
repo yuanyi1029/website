@@ -3,7 +3,10 @@ import skillsData from "../data/skillsData";
 
 const Skills: React.FC = () => { 
   return ( 
-    <section className="container border-t-2 border-highlight">
+    <section 
+      id="skills"
+      className="container border-t-2 border-highlight"
+    >
       <Scroll>
         <h1 className="py-[2rem]">Some of My Skills.</h1>
         {

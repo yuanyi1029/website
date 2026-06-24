@@ -4,7 +4,10 @@ import { formatDate } from "../utils/format";
 
 const Experience: React.FC = () => { 
   return ( 
-    <section className="container border-t-2 border-highlight">
+    <section 
+      id="experience"
+      className="container border-t-2 border-highlight"
+    >
       <Scroll>
         <h1 className="py-[2rem]">What I'm Doing.</h1>
         { 

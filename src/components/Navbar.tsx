@@ -82,30 +82,31 @@ const Navbar: React.FC = () => {
         </li>
         <li>
           <h3>
-            <Link 
-              to="/about" 
+            <HashLink 
+              smooth
+              to="/#skills" 
               onClick={ closeMenu }
               className="
                 block p-2 md:py-0 
                 bg-highlight md:bg-transparent rounded-2xl 
                 hover:text-hover"
             >
-              About.
-            </Link>
+              Skills.
+            </HashLink>
           </h3>
         </li>
         <li>
           <h3>
             <HashLink 
               smooth 
-              to="/#contact" 
+              to="/#experience" 
               onClick={ closeMenu }
               className="
                 block p-2 md:py-0 
                 bg-highlight md:bg-transparent rounded-2xl 
                 hover:text-hover"
             >
-              Contact.
+              Experience.
             </HashLink>
           </h3>
         </li>

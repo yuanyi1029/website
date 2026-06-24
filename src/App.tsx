@@ -3,7 +3,6 @@ import { ToastContainer } from "react-toastify";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home"; 
-import About from "./pages/About"; 
 import Error from "./pages/Error";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -21,7 +20,6 @@ const App = () => {
         <Navbar /> 
         <Routes>
           <Route path="/" element={ <Home /> } />
-          <Route path="/about" element={ <About /> } />
           <Route path="*" element={ <Error /> } />
         </Routes>
         <Footer />

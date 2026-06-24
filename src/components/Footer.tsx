@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
           <IoMdMail className="text-[2rem]" /> 
         </a>
       </div> 
-      <p>Made with ❤️ by Yuanyi © 2025.</p>
+      <p>Made with ❤️ by Yuanyi © 2026.</p>
     </footer>
   )
 }

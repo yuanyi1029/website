@@ -46,6 +46,11 @@ const skillsData: Skill[] = [
         label: "CSS", 
       }, 
       { 
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg", 
+        alt: "NextJS Icon", 
+        label: "NextJS", 
+      }, 
+      { 
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", 
         alt: "React Icon", 
         label: "ReactJS", 
@@ -76,25 +81,40 @@ const skillsData: Skill[] = [
         label: "NodeJS", 
       }, 
       { 
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg", 
+        alt: "Supabase Icon", 
+        label: "Supabase", 
+      }, 
+      { 
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg", 
+        alt: "Firebase Icon", 
+        label: "Firebase", 
+      }, 
+      { 
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg", 
         alt: "MySQL Icon", 
         label: "MySQL", 
       }, 
-      { 
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg", 
-        alt: "MongoDB Icon", 
-        label: "MongoDB", 
-      }, 
-      { 
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg", 
-        alt: "Postman Icon", 
-        label: "Postman", 
-      }
     ]
   },
   {
     title: "Other Tools", 
     icons: [ 
+      { 
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg", 
+        alt: "Docker Icon", 
+        label: "Docker", 
+      },
+      { 
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg", 
+        alt: "Postman Icon", 
+        label: "Postman", 
+      },
+      { 
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg", 
+        alt: "Cloudflare Icon", 
+        label: "Cloudflare", 
+      },
       { 
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg", 
         alt: "Git Icon", 
@@ -104,17 +124,7 @@ const skillsData: Skill[] = [
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg", 
         alt: "Linux Icon", 
         label: "Linux", 
-      },
-      { 
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg", 
-        alt: "Visual Studio Code Icon", 
-        label: "VS Code", 
-      },
-      { 
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg", 
-        alt: "IntelliJ Icon", 
-        label: "IntelliJ", 
-      } 
+      }
     ]
   }
 ]

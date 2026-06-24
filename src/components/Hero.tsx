@@ -14,32 +14,19 @@ const Hero: React.FC = () => {
             <div className="
               col-span-10 md:col-span-6 pb-0 md:pb-20 order-2 md:order-1"
             > 
-              <h1>
+              <h1 className="text-center md:text-left pt-6 md:pt-0">
                 Hello, I'm Yuanyi. 👋
               </h1>
-              <h3 className="pb-[1rem] md:pb-[2rem] font-normal leading-tight"> 
-                I am a <b>sofware engineer</b> who enjoys <b>enhancing lives</b> with
-                code by day, and exploring new technologies to fuel my growth by 
-                night. 
+              <h3 className="pb-[1rem] md:pb-[2rem] text-center md:text-left font-normal leading-tight"> 
+                <b>Software engineer</b> solving practical problems by day, <b>AI tinkerer </b> 
+                exploring endless side-quests by night.  
               </h3>
               <h4 className="
                 px-[1rem] py-[0.25rem] 
                 bg-highlight rounded-xl"
               > 
-                📌 Currently a Backend Engineer at { " " }
-                <b>
-                  <u className="bg-highlight">
-                    <a 
-                      href="https://www.antglobal.com/" 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      className="bg-transparent hover:text-hover"
-                    >
-                      Ant International
-                    </a>
-                  </u>
-                </b>. 
-              </h4>   
+                📌 Currently building projects & exploring opportunities!
+              </h4>
             </div>
             <div className="
               col-span-10 md:col-span-4 pb-0 md:pb-10 order-1 md:order-2"
