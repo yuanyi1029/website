@@ -56,6 +56,10 @@
   }
   html {
     @apply font-sans;
+    cursor: url("/cursor.svg") 12 12, default;
+  }
+  a, button, .custom-pointer { 
+    cursor: url("/pointer.svg") 12 12, pointer;
   }
   h1 { 
     @apply text-[2rem] md:text-[3rem] font-semibold tracking-tight leading-[1.2];
@@ -73,6 +77,12 @@
     @apply text-[1rem] md:text-[1rem] font-normal leading-[1.4];
   }
 }
+
+@layer components { 
+  .wrapper { 
+    @apply max-w-4xl ml-auto mr-auto px-3 md:px-0
+  }
+} 
 
 /* TODO  */
 /* F6F6F6 - oklch(0.9731 0.000 0) */

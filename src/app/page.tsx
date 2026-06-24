@@ -10,7 +10,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-start justify-center max-w-3xl mx-auto px-8 gap-8">
+    <div className="wrapper">
 
       {/* Hero section */}
       <div className="flex flex-col gap-2">
@@ -22,7 +22,7 @@ export default function Home() {
       <hr className="w-full border-t border-neutral-200" />
 
       {/* About section */}
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 custom-pointer">
         <h2>About me.</h2>
         <h3>I am a software engineer who enjoys enhancing lives through thoughtful, human-centred design and code.</h3>
         <p>Currently working at the intersection of machine learning and interface design, I build tools that make complex systems feel simple and approachable. Previously at Apple, Google, and a handful of early-stage startups.</p>
