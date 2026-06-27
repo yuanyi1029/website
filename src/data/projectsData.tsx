@@ -1,5 +1,4 @@
 import Project from "../interfaces/project";
-import placeholder from "../assets/placeholder.png"; 
 import optimizer from "../assets/optimizer.png";
 import santorini from "../assets/santorini.png";
 import tetris from "../assets/tetris.png"; 
